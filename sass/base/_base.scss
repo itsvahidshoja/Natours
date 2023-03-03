@@ -7,10 +7,39 @@
 }
 html {
   font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 40%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
   overflow-x: hidden;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+section {
+  @include respond(tab-land) {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }

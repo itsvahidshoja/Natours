@@ -15,6 +15,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
 
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
   &__background {
     width: 6rem;
@@ -32,6 +42,16 @@
     backface-visibility: hidden;
 
     //transform: scale(80);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__nav {
     height: 100vh;
@@ -43,13 +63,15 @@
     opacity: 0;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    // visibility: hidden;
   }
   &__list {
     @include centerAbsolute;
     list-style: none;
     text-align: center;
+
+    @include respond(phone) {
+      width: 100rem;
+    }
   }
   &__item {
     margin: 1rem;
@@ -76,6 +98,10 @@
       span {
         margin-right: 1.5rem;
         display: inline-block;
+      }
+
+      @include respond(phone) {
+        background-size: 250%;
       }
     }
 

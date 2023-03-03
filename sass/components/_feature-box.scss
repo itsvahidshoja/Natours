@@ -18,6 +18,10 @@
     color: transparent;
     font-size: 6rem;
     margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
